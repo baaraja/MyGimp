@@ -1,0 +1,22 @@
+{
+  "name": "mygimp-client",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6"
+  },
+  "dependenciesMeta": {},
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.0.0",
+    "vite": "5.0.0"
+  }
+}
