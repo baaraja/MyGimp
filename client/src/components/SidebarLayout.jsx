@@ -53,9 +53,11 @@ export default function SidebarLayout(){
   }
 
   const width = collapsed ? 72 : 260
+  const isEditor = location.pathname.startsWith('/editor') || /^\/projects\/[^/]+$/.test(location.pathname)
 
   return (
     <div style={{display:'flex', height:'100vh'}}>
+      {!isEditor && (
       <aside style={{width, transition:'width .18s ease', background: '#f7fbff', borderRight: '1px solid #e6eefc', paddingTop:8, display:'flex', flexDirection:'column'}}>
         <div style={{padding: collapsed ? 8 : 12, display:'flex', alignItems:'center', justifyContent:'space-between'}}>
           <div style={{display:'flex', alignItems:'center', flex: collapsed ? 1 : 'none', justifyContent: collapsed ? 'center' : 'flex-start'}}>
@@ -190,7 +192,8 @@ export default function SidebarLayout(){
         </Modal>
         <div style={{flexGrow:1}} />
       </aside>
-      <main style={{flexGrow:1, padding:16}}>
+      )}
+      <main style={{flexGrow:1, padding: isEditor ? 0 : 16}}>
         <Outlet />
       </main>
     </div>

@@ -73,7 +73,7 @@ export default function Projects(){
                   {p.description ? <Card.Text className="text-muted small">{p.description}</Card.Text> : null}
                   <div className="mt-auto d-flex justify-content-between align-items-center">
                     <div style={{display:'flex', gap:8}}>
-                      <Button size="sm" variant="primary" onClick={()=> window.location.href = `/projects/${p.id}`}>
+                      <Button size="sm" variant="primary" onClick={()=> window.location.href = `/editor`}>
                         Open
                       </Button>
                       <Button size="sm" variant="outline-danger" onClick={()=>deleteProject(p.id)} disabled={deletingId === p.id} title="Delete project" aria-label="Delete project">

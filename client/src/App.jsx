@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Projects from './pages/Projects'
+import Editor from './pages/Editor'
 import SidebarLayout from './components/SidebarLayout'
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
@@ -91,6 +92,8 @@ export default function App(){
         <Route element={<SidebarLayout />}>
           <Route path="/u/:user/boards" element={<Projects />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<Editor />} />
+          <Route path="/editor" element={<Editor />} />
         </Route>
       </Routes>
       </Container>
